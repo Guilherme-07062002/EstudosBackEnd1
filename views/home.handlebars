@@ -1,9 +1,21 @@
 <h2>Lista de posts:</h2>
-{{#each posts}}
+{{!-- {{#each posts}}
 <h3> {{ titulo }} </h3>
 <p> {{ conteudo }} </p>
 <a href="/deletar/{{id}}">
-    <button>Deletar</button>
+    <button class="btn btn-primary">Deletar</button>
 </a>
 <hr>
+{{/each}} --}}
+{{#each posts}}
+<div class="card" style="width: 18rem; margin-top: 4vh;">
+  <div class="card-body">
+    <h5 class="card-title">{{ titulo }}</h5>
+    <p class="card-text">{{ conteudo }}</p>
+    <a href="/deletar/{{id}}" class="btn btn-primary">Deletar</a>
+  </div>
+</div>
 {{/each}}
+
+
+

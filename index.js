@@ -42,9 +42,9 @@ app.post('/add', (req, res) => {
 
 app.get('/deletar/:id', function (req, res) {
     Post.destroy({ where: { 'id': req.params.id } }).then(() => {
-        res.send('Postagem deletada.')
+        res.send('<h2>Postagem deletada.</h2>')
     }).catch((erro) => {
-        res.send('Essa postagem não existe.')
+        res.send('<h2>Essa postagem não existe.</h2>')
     })
 })
 
